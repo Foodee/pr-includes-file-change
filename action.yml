@@ -1,0 +1,17 @@
+name:        'Pr Includes File Change'
+description: 'Basic action that determines if a PR includes a file change'
+author:      'Joe Gaudet <joe.gaudet@food.ee>'
+runs:
+  using: 'node12'
+  main:  'main.js'
+branding:
+  icon:  'search'
+  color: 'red'
+inputs:
+  paths:
+    description: 'Paths to match in this pull  request'
+    required: true
+    default: ''
+  outputs:
+    matched:
+      description: 'Whether or not any of the paths were matched'
